@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+:root{
+  --bg-color:rgb(230,245,255);
+  --full-white:rgba(255, 255, 255,1);
+  --full-black:rgba(0,0,0,1);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Squada One';
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+::selection{
+  color: black;
+  background: var(--bg-color);
+}
+::-webkit-scrollbar {
+  display: none;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  background-color: var(--bg-color);
+}
+.device-support {
+  display: none;
+}
+@media only screen and (max-height:640px) {
+  html, body{
+    width: 0;
+    height: 0;
+  }
+  .device-support {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container, .mobile, .branding {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.branding, .branding::selection{
+  position: absolute;
+  top: 1vh;
+  font-size: 25vw;
+  color: var(--bg-color);
+  text-shadow:  -0.2rem 0 var(--full-black), 0 0.2rem var(--full-black), 0.2rem 0 var(--full-black), 0 -0.2rem var(--full-black);
+}
+.branding::selection{background: rgba(0,0,0,0.5);}
+.mobile {
+  width: 30vh;
+  z-index: 1;
+  min-width: 19.375rem;
+  max-width: 31.25rem;
+  aspect-ratio: 1/2;
+  margin: .625rem;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  border: 10px solid var(--full-black);
+  border-radius: 2.8125rem;
+  background-color: var(--full-black);
+  box-shadow: -3.125rem 3.125rem 1.25rem #303030;
+}
+.mobile section{
+  scroll-snap-align: start;
+}
+.homepage {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+                rgba(0,0,0,0),
+                rgba(0,0,0, 0.7)
+                ),
+                url(../img/Solars_Wallpaper.png) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.homepage-container{
+  width: 100%;
+  height: calc(100% - 1.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.datetime_sec{
+  width: 50%;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  font-size: 2.7rem;
+  color: #060606;
+}
+.datetime_sec .weather{
+  padding-top: 0.5rem;
+  font-size: 0.7rem;
+}
+.socials{
+  width: 40%;
+  margin-top: 3.5rem;
+  margin-left: 60%;
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+.s-logo{
+  margin: 0.5rem;
+  color: white;
+}
+.media-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.media-controller-container{
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.media-controller{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--full-white);
+}
+.media-controller #media-button{
+  width: 2.5rem;
+}
+.timeline-container{
+  width: calc(100% - 3.4rem);
+}
+.progress_bar {
+  background-color: var(--full-white);
+  height: 0.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.progress {
+  height: 0.5rem;
+  background-color: var(--full-white);
+  transform: translateY(-0.15rem);
+  cursor: pointer;
+  width: 0%;
+}
+.timecounter{
+  margin-top: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.song_name_container{
+  width: 100%;
+  height: 1.2rem;
+  overflow-y: hidden;
+}
+.song_name{
+  width: 100%;
+}
+.homefooter{
+  width: 100%;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* homepage done */
+
+/* Final page */
+.finalpage{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.finalpage a{
+  color: white;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.finalpage_container{
+  width: 100%;
+  height: calc(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info{
+  width: 70%;
+  margin-top: 2rem;
+  color: var(--full-white);
+  text-align: center;
+}
+footer.credit{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--full-white);
+}
