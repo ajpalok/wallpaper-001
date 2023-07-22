@@ -81,13 +81,13 @@ let play_now = false;
 const playMusic = () => {
   play_now = true;
   audio.play();
-  sound_button.setAttribute('href', '#pause');
+  sound_button.firstElementChild.setAttribute('href', '#pause');
 };
 
 const pauseMusic = () => {
   play_now = false;
   audio.pause();
-  sound_button.setAttribute('href', '#play');
+  sound_button.firstElementChild.setAttribute('href', '#play');
 };
 
 const loadSong = (currSong) => {
